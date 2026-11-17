@@ -1,3 +1,36 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>抽選方法を選択</title><link rel="stylesheet" href="../style.css"></head><body><main><a class="back" href="../">← サービス案内へ戻る</a><div class="spark">✦</div><h1>抽選方法を選択</h1><p class="sub">お好きな方法をお選びください</p><div id="choices" class="links"></div><p class="note">現在は動作確認用のデモです。景品の付与や参加制限には対応していません。</p></main><script src="../config.js"></script><script>
-'use strict';const root=document.getElementById('choices');for(const x of window.NFC_CONFIG.lottery){if(!x.enabled)continue;const a=document.createElement('a');a.className='link';a.href='play.html?type='+encodeURIComponent(x.type);a.textContent=x.label+' →';root.append(a)}
-</script></body></html>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f6f1">
+  <title>抽選方法を選択</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <main>
+    <a class="back" href="../">← サービス案内へ戻る</a>
+    <div class="spark">✦</div>
+    <h1>抽選方法を選択</h1>
+    <p class="sub">お好きな方法をお選びください</p>
+    <div id="choices" class="links"></div>
+    <p class="note">抽選後は結果画面をスタッフにお見せください。現在は抽選結果の自動保存・受付番号発行・特典付与管理には未対応です。</p>
+  </main>
+  <script>
+    'use strict';
+    const choices = [
+      {label:'ルーレット抽選',url:'https://1ma-ma-ma1.github.io/ru-retto/roulette/'},
+      {label:'くじ引き',url:'https://1ma-ma-ma1.github.io/ru-retto/kuji/'},
+      {label:'あみだくじ',url:'https://1ma-ma-ma1.github.io/ru-retto/amida/'}
+    ];
+    const root=document.getElementById('choices');
+    for(const item of choices){
+      const a=document.createElement('a');
+      a.className='link';
+      a.href=item.url;
+      a.textContent=item.label+' ↗';
+      root.append(a);
+    }
+  </script>
+</body>
+</html>
