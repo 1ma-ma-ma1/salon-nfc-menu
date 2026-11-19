@@ -2,9 +2,8 @@
 window.NFC_CONFIG = {
   title: 'サービスのご案内',
   links: [
-    {label:'LINEお友だち登録',url:'',enabled:true},
-    {label:'公式アプリ',url:'',enabled:true},
-    {label:'口コミのご案内',url:'',enabled:true},
+    {label:'LINEお友だち登録',url:'https://lin.ee/XOot0FQ',enabled:true},
+    {label:'口コミのご案内',url:'https://g.page/r/CWJEkm8XNSRHEAE/review',enabled:true},
     {label:'抽選に参加',url:'lottery/',enabled:true},
     {label:'お知らせ',url:'',enabled:true}
   ],
