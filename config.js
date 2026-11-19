@@ -6,12 +6,13 @@ window.NFC_CONFIG = {
     {label:'公式アプリ',url:'',enabled:true},
     {label:'口コミのご案内',url:'',enabled:true},
     {label:'抽選に参加',url:'lottery/',enabled:true},
-    {label:'お知らせ',url:'',enabled:false}
+    {label:'お知らせ',url:'',enabled:true}
   ],
   lottery: [
     {label:'ルーレット抽選',type:'roulette',enabled:true},
     {label:'くじ引き',type:'kuji',enabled:true},
-    {label:'あみだくじ',type:'amida',enabled:true}
+    {label:'あみだくじ',type:'amida',enabled:true},
+    {label:'たまご抽選',type:'egg',enabled:true}
   ],
   // デモ用の抽選結果。実際の景品・当選率は運用開始前に別途設計してください。
   demoResults: ['結果A','結果B','結果C']
